@@ -51,14 +51,16 @@ namespace FabrikamFiber.Web.PureSeleniumTests
 
         [TestMethod]
         [Priority(0)]
+        [Ignore]
         public void Selenium_CreateNewCustomerRecordFireFox()
         {
             this.driver = new FirefoxDriver();
             Selenium_CreateNewCustomerRecord();
         }
 
-        //[TestMethod]
-        //[Priority(0)]
+        [TestMethod]
+        [Priority(0)]
+        [Ignore]
         public void Selenium_CreateNewCustomerRecordChrome()
         {
             this.driver = new ChromeDriver();
