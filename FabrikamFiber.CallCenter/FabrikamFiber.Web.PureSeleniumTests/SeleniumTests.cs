@@ -30,7 +30,15 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         [TestInitialize]
         public void SetupTest()
         {
-            baseURL = this.TestContext.Properties["webAppUrl"].ToString();
+            if (this.TestContext.Properties.Contains("webAppUrl"))
+            {
+                baseURL = this.TestContext.Properties["webAppUrl"].ToString();
+            }
+            else
+            {
+                baseURL = "http://localhost:8080";//"http://ffcallcenter-dev.azurewebsites.net";
+            }
+
             verificationErrors = new StringBuilder();
         }
 
@@ -57,8 +65,9 @@ namespace FabrikamFiber.Web.PureSeleniumTests
             Selenium_CreateNewCustomerRecord();
         }
 
-        //[TestMethod]
-        //[Priority(0)]
+        [TestMethod]
+        [Priority(0)]
+        [Ignore]
         public void Selenium_CreateNewCustomerRecordChrome()
         {
             this.driver = new ChromeDriver();
@@ -84,6 +93,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
 
         [TestMethod]
         [Priority(0)]
+        [Ignore]
         public void Selenium_VerifyDashboardPageChrome()
         {
             this.driver = new ChromeDriver();
@@ -101,7 +111,6 @@ namespace FabrikamFiber.Web.PureSeleniumTests
 
         [TestMethod]
         [Priority(0)]
-        [Ignore]
         public void Selenium_VerifyDashboardPage_NavigatesToReportFireFox()
         {
             this.driver = new FirefoxDriver();
@@ -156,9 +165,10 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         private void Selenium_VerifyDashboardPage_NavigatesToReport()
         {
             driver.Navigate().GoToUrl(baseURL);
-            driver.FindElement(By.CssSelector("ul.alerts li a span")).Click();
-            String pageTitle = driver.FindElement(By.CssSelector("#content h1")).Text.Trim();
-            Assert.AreEqual("Alerts", pageTitle,"Expected to be on Alerts page on click of Alerts, but ended up on " + pageTitle +" page.");
+            driver.FindElement(By.LinkText("Reports")).Click();
+            System.Threading.Thread.Sleep(6000);
+            String pageTitle = driver.FindElement(By.CssSelector("#content h2")).Text.Trim();
+            Assert.AreEqual("Reports", pageTitle,"Expected to be on Reports page on click of Reports, but ended up on " + pageTitle +" page.");
         }
 
         private bool IsElementPresent(By by)

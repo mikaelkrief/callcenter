@@ -4,7 +4,9 @@
     ViewBag.Title = "Home Page";
 }
 
+<i><b>@System.Web.Configuration.WebConfigurationManager.AppSettings["Title"]</b></i>
 <h1>Dashboard</h1>
+
 <p>
     @Html.ActionLink("Create New", "Create", "ServiceTickets", null, new { @class = "glossyBox createNew" })
 </p>
