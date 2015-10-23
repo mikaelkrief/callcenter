@@ -36,7 +36,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
             }
             else
             {
-                baseURL = "http://ffcallcenter-dev.azurewebsites.net"; // "http://localhost:8080";                
+                baseURL = "http://localhost:8080"; //"http://ffcallcenter-dev.azurewebsites.net"; 
             }
 
             verificationErrors = new StringBuilder();
