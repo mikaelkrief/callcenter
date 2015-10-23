@@ -39,7 +39,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		WeatherWSDL Test Steps.txt = WeatherWSDL Test Steps.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShuttle.Web.PureSeleniumTests", "FabrikamFiber.Web.PureSeleniumTests\MyShuttle.Web.PureSeleniumTests.csproj", "{AF7F18E7-E7D0-4250-A6E2-8A2D900E22DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabrikamFiber.Web.PureSeleniumTests", "FabrikamFiber.Web.PureSeleniumTests\FabrikamFiber.Web.PureSeleniumTests.csproj", "{AF7F18E7-E7D0-4250-A6E2-8A2D900E22DD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabrikamFiber.Web.Tests", "FabrikamFiber.Web.Tests\FabrikamFiber.Web.Tests.csproj", "{2FE8E250-4218-4B31-AB23-D9B91ABD842B}"
 EndProject
