@@ -472,6 +472,9 @@
     <Content Include="Deploy\Fab_Configuration.ps1" />
     <Content Include="Deploy\Fab_DataScript.ps1" />
     <Content Include="Deploy\InstallModules.ps1" />
+    <Content Include="Deploy\ConfigWebApp.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="readme.txt" />
     <Content Include="Views\Customers\Create.cshtml" />
     <Content Include="Views\Customers\Edit.cshtml" />
