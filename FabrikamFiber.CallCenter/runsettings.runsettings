@@ -6,7 +6,7 @@
   </RunConfiguration>
   
   <TestRunParameters>
-    <Parameter name="webAppUrl" value="http://localhost:8080" />
+    <Parameter name="webAppUrl" value="http://ffcallcenter-dev.azurewebsites.net" />
   </TestRunParameters>
 
   <!-- Adapter Specific sections -->
