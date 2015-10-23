@@ -36,7 +36,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
             }
             else
             {
-                baseURL = "http://localhost:8080";//"http://ffcallcenter-dev.azurewebsites.net";
+                baseURL = "http://ffcallcenter-dev.azurewebsites.net"; // "http://localhost:8080";                
             }
 
             verificationErrors = new StringBuilder();
@@ -138,6 +138,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         private void Selenium_CreateNewCustomerRecord()
         {
             driver.Navigate().GoToUrl(baseURL);
+            this.TestContext.WriteLine("Visiting Customers link from {0}", baseURL);
             driver.FindElement(By.LinkText("Customers")).Click();
             driver.FindElement(By.LinkText("Create New")).Click();
             driver.FindElement(By.Id("FirstName")).Clear();
@@ -158,6 +159,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         private void Selenium_VerifyDashboardPage()
         {
             driver.Navigate().GoToUrl(baseURL);
+            this.TestContext.WriteLine("Reading h1 element at {0}", baseURL);
             String pageTitle = driver.FindElement(By.CssSelector("#content h1")).Text.Trim();
             Assert.AreEqual(pageTitle, "Dashboard");
         }
@@ -165,6 +167,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         private void Selenium_VerifyDashboardPage_NavigatesToReport()
         {
             driver.Navigate().GoToUrl(baseURL);
+            this.TestContext.WriteLine("Visiting reports link from {0}",baseURL);
             driver.FindElement(By.LinkText("Reports")).Click();
             System.Threading.Thread.Sleep(6000);
             String pageTitle = driver.FindElement(By.CssSelector("#content h2")).Text.Trim();
