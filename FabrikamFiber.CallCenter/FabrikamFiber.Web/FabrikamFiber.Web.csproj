@@ -196,6 +196,9 @@
     </Content>
     <!-- <Content Include="Scripts\CodeController.js" /> </Content> -->
     <!--<Content Include="Scripts\CodeControllerTest.js" /></Content> -->
+    <Content Include="Deploy\ConfigAzureTrafficManager.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Deploy\xWebAdministration\TechNetDocumentation-xWebAdministration.html" />
     <Content Include="Deploy\xWebAdministration\_PSGetItemInfo.xml" />
     <Content Include="Scripts\jquery.uitablefilter.js" />
