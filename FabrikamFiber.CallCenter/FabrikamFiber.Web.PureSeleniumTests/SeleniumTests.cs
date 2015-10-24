@@ -162,7 +162,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
             driver.Navigate().GoToUrl(baseURL);
             this.TestContext.WriteLine("Reading h1 element at {0}", baseURL);
             String pageTitle = driver.FindElement(By.CssSelector("#content h1")).Text.Trim();
-            Assert.AreEqual(pageTitle, "Dashboard");
+            Assert.AreEqual(pageTitle, "Summary");
         }
 
         private void Selenium_VerifyDashboardPage_NavigatesToReport()
