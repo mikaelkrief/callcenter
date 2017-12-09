@@ -2,7 +2,7 @@ queue: Hosted
 steps:
 - task: DevMikaelKrief.githubtools.GitHubTag.GitHubTag@0
   inputs:
-    githubEndpoint: "github connection OAuth"
+    githubEndpoint: "9279196d-7673-46dc-8e1e-3a59a53d79c7"
     tag: "v$(Build.BuildNumber)"
     repositoryName: "$(Build.Repository.Name)"
     commmit: "$(Build.SourceVersion)"
