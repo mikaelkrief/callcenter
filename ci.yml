@@ -1,0 +1,7 @@
+steps:
+- task: DevMikaelKrief.githubtools.GitHubTag.GitHubTag@0
+  inputs:
+    githubEndpoint: "GitHub connection 1"
+    tag: "v$(Build.BuildNumber)"
+    repositoryName: "$(Build.Repository.Name)"
+    commmit: "$(Build.SourceVersion)"
