@@ -1,7 +1,7 @@
 steps:
 - task: DevMikaelKrief.githubtools.GitHubTag.GitHubTag@0
   inputs:
-    githubEndpoint: "3f99fb01-bb47-4ead-8999-efd987885cf7"
+    githubEndpoint: "github connection OAuth"
     tag: "v$(Build.BuildNumber)"
     repositoryName: "$(Build.Repository.Name)"
     commmit: "$(Build.SourceVersion)"
